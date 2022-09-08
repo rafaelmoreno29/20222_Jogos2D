@@ -5,27 +5,27 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637970248023367103
-    m_Hash: 1961831218
+      ticks: 637982419910111313
+    m_Hash: 2633058894
   m_LockFileStatus:
     m_FilePath: C:/Users/rafae/Documents/Aulas/Git/20222_Jogos2D/Aula2/My project/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637970248070864070
-    m_Hash: 2642814715
+      ticks: 637982419910247228
+    m_Hash: 1139724936
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
   m_Packages:
     m_ResolvedPackages:
-    - packageId: com.unity.2d.animation@5.2.0
+    - packageId: com.unity.2d.animation@5.2.3
       testable: 0
       isDirectDependency: 1
-      version: 5.2.0
+      version: 5.2.3
       source: 1
-      resolvedPath: C:\Users\rafae\Documents\Aulas\Git\20222_Jogos2D\Aula2\My project\Library\PackageCache\com.unity.2d.animation@5.2.0
+      resolvedPath: C:\Users\rafae\Documents\Aulas\Git\20222_Jogos2D\Aula2\My project\Library\PackageCache\com.unity.2d.animation@5.2.3
       assetPath: Packages/com.unity.2d.animation
       name: com.unity.2d.animation
       displayName: 2D Animation
@@ -137,6 +137,7 @@ m_PackageAssets:
         - 8.0.3
         - 9.0.0-pre.1
         - 9.0.0-pre.3
+        - 9.0.0
         compatible:
         - 5.2.0
         - 5.2.1
@@ -187,13 +188,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637836454510000000
+      datePublishedTicks: 637928068080000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/2d.git
-        revision: de062e9b52e01d9b7c1e2b7e86c8897a78342167
+        revision: 4385ec621f62136eca5cf0bcfff8c3d711d7680b
         path: 
     - packageId: com.unity.2d.pixel-perfect@4.0.1
       testable: 0
@@ -240,6 +241,7 @@ m_PackageAssets:
         - 5.0.0-pre.2
         - 5.0.0
         - 5.0.1
+        - 5.0.2
         compatible:
         - 4.0.1
         verified: 4.0.1
@@ -354,6 +356,7 @@ m_PackageAssets:
         - 7.0.2
         - 8.0.0-pre.1
         - 8.0.0-pre.3
+        - 8.0.0
         compatible:
         - 4.3.0
         verified: 4.3.0
@@ -380,7 +383,7 @@ m_PackageAssets:
       - name: com.unity.modules.uielementsnative
         version: 1.0.0
       - name: com.unity.2d.animation
-        version: 5.2.0
+        version: 5.2.3
       - name: com.unity.mathematics
         version: 1.1.0
       - name: com.unity.modules.animation
@@ -556,6 +559,7 @@ m_PackageAssets:
         - 8.0.0
         - 8.0.1
         - 9.0.0-pre.1
+        - 9.0.0
         compatible:
         - 5.3.0
         verified: 5.3.0
@@ -3622,6 +3626,7 @@ m_PackageAssets:
         - 7.0.1
         - 8.0.0-pre.1
         - 8.0.0-pre.2
+        - 8.0.0
         compatible:
         - 4.2.0
         verified: 4.2.0
