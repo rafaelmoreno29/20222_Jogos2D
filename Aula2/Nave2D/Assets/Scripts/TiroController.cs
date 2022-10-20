@@ -26,7 +26,7 @@ public class TiroController : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Destroy(gameObject);
-            NaveController.pontuacao++;
+            NaveController.AtualizarPontuacao();
             Debug.Log(NaveController.pontuacao);
         }
     }

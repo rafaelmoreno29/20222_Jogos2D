@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NaveController : MonoBehaviour
 {
-    public static int pontuacao;
+    public static int pontuacao;    
 
     private Rigidbody2D rigidbody;
     private Vector3 posicaoSpawn;
@@ -16,6 +16,17 @@ public class NaveController : MonoBehaviour
     [SerializeField]
     float velocidadeNave;
 
+    GameObject canvas;
+
+    [SerializeField]
+    AudioClip tiroAudioClip;
+    AudioSource audioSource;
+
+    public static void AtualizarPontuacao()
+    {
+        pontuacao++;
+    }
+
     public void mudarPosicaoSpawn(Vector3 novaPosicaoSpawn)
     {
         posicaoSpawn = novaPosicaoSpawn;
@@ -25,7 +36,9 @@ public class NaveController : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
 
+        canvas = GameObject.Find("Canvas");
         rigidbody = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
         posicaoSpawn = transform.position;
         pontuacao = 0;
     }
@@ -36,6 +49,7 @@ public class NaveController : MonoBehaviour
         {
             transform.position = posicaoSpawn;
             rigidbody.velocity = Vector3.zero;
+            Destroy(collision.gameObject);
         }
     }
 
@@ -50,10 +64,31 @@ public class NaveController : MonoBehaviour
         {
             CriarTiro();
         }
+        if(Input.GetButtonDown("Cancel"))
+        {
+            AbrirPanelMenu();
+        }
+    }
+
+    public void AbrirPanelMenu()
+    {
+        canvas.GetComponent<FaseCanvasController>().ChamarPanelMenu();
+        if(canvas.GetComponent<FaseCanvasController>().GetActivePanelMenu())
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
     }
     public void CriarTiro()
     {
-        Instantiate(TiroPrefab, TiroSpawn.transform.position,transform.rotation);
+        if (canvas.GetComponent<FaseCanvasController>().GetActivePanelMenu() == false)
+        {
+            Instantiate(TiroPrefab, TiroSpawn.transform.position, transform.rotation);
+            audioSource.PlayOneShot(tiroAudioClip, 1f);
+        }
     }
     private void FixedUpdate()
     {
