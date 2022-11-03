@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuCanvasController : MonoBehaviour
 {
@@ -9,11 +10,17 @@ public class MenuCanvasController : MonoBehaviour
     GameObject panelPrincipal;
     [SerializeField]
     GameObject panelSobre;
+    [SerializeField]
+    Text textPontuacao;
     // Start is called before the first frame update
     void Start()
     {
         panelPrincipal.SetActive(true);
         panelSobre.SetActive(false);
+        if (PlayerPrefs.HasKey("maiorPontuacao"))
+        {
+            textPontuacao.text = "Maior Pontuação: " + PlayerPrefs.GetInt("maiorPontuacao");
+        }
     }
     public void ButtonIniciarClick()
     {

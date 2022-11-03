@@ -229,6 +229,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6684461468390015464, guid: 16386515e284e42478f9905427cbd67d, type: 3}
   m_PrefabInstance: {fileID: 8317451003272111770}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &141879381
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141879380}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 41dcfb2780b882e49a67c1185ff240dd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!82 &141879385
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2070,6 +2089,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textoPontuacao: {fileID: 1907856138}
   panelMenu: {fileID: 1449565508}
+  volume: {fileID: 1562254718}
+  mudo: {fileID: 967286727}
 --- !u!1001 &1447849609
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3140,6 +3161,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 578039875420209117, guid: 16386515e284e42478f9905427cbd67d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6614563125321452195, guid: 60dfe1e8f1e7a3d40983b98085c284f2, type: 3}
     - target: {fileID: 4561002131561502375, guid: 16386515e284e42478f9905427cbd67d, type: 3}
       propertyPath: TiroSpawn
       value: 
@@ -3148,6 +3173,10 @@ PrefabInstance:
       propertyPath: TiroPrefab
       value: 
       objectReference: {fileID: 7530310384015897325, guid: d07dce8ba65d99d4a8d7bef1ce317909, type: 3}
+    - target: {fileID: 4561002131561502375, guid: 16386515e284e42478f9905427cbd67d, type: 3}
+      propertyPath: explosaoClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b8730761822d03840815f1100ffd94b0, type: 3}
     - target: {fileID: 4561002131561502375, guid: 16386515e284e42478f9905427cbd67d, type: 3}
       propertyPath: tiroAudioClip
       value: 

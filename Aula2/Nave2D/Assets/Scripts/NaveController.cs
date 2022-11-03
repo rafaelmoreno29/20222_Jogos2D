@@ -50,11 +50,16 @@ public class NaveController : MonoBehaviour
     {
         if (collision.gameObject.tag == "meteoro")
         {
+            if (pontuacao > PlayerPrefs.GetInt("maiorPontuacao"))
+            {
+                PlayerPrefs.SetInt("maiorPontuacao", pontuacao);
+            }
             animator.Play("NaveExplodindo");
             animator.SetBool("explodindo", true);
             audioSource.PlayOneShot(explosaoClip, 1f);
             rigidbody.velocity = Vector3.zero;
             Destroy(collision.gameObject);
+
         }
     }
 
